@@ -1,11 +1,7 @@
-from __future__ import annotations
-
 import random
-from typing import TYPE_CHECKING
+import re
 
-
-if TYPE_CHECKING:
-    import datasets
+import datasets
 
 
 def preprocess(text):
@@ -13,7 +9,7 @@ def preprocess(text):
         return " "
     text = text.strip()
     text = text.replace(" [title]", ". ")
-
+    text = re.sub("\\[.*?\\]", "", text)
     text = text.replace("  ", " ")
     return text
 

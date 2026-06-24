@@ -42,3 +42,34 @@ def doc_to_text(doc):
 
 def doc_to_choice(doc):
     return [alpa[i][0] for i in range(5) if doc[f"Option {i + 1}"]]
+
+
+import re
+def filter_arabic_mmlU(**kwarg):
+    """
+    Standard filter signature for many harness tasks.
+    It usually takes a list of strings and returns a list of processed strings.
+    """
+    print(kwarg)
+    results = []
+    processed_results = []
+    for res in results:
+        # 1. Clean whitespace
+        cleaned = res.strip()
+        # 2. Extract first A-D or أ-د
+        match = re.search(r'[A-Dأ-د]', cleaned)
+        if match:
+            processed_results.append(match.group(0))
+        else:
+            processed_results.append(cleaned)
+    return processed_results
+
+def process_results(*args, **kwargs):
+    # This will never throw a TypeError because it accepts everything.
+    # We just need to find 'doc' and 'results' inside them.
+    
+    # Usually: args[0] is doc, args[1] is results
+    doc = kwargs.get('doc', args[0] if len(args) > 0 else None)
+    results = kwargs.get('results', args[1] if len(args) > 1 else None)
+    
+    # ... (rest of extraction logic) ...

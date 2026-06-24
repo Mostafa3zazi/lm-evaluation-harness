@@ -1,4 +1,5 @@
 import re
+from typing import List
 
 import numpy as np
 
@@ -7,7 +8,7 @@ from lm_eval.api.task import ConfigurableTask
 
 
 class FDA(ConfigurableTask):
-    VERSION = 1
+    VERSION = 0
     DATASET_PATH = "hazyresearch/based-fda"
     DATASET_NAME = "default"
 
@@ -27,10 +28,10 @@ class FDA(ConfigurableTask):
         return self.dataset["validation"]
 
     def doc_to_text(self, doc):
-        return doc["text"].strip()
+        return doc["text"]
 
     def doc_to_target(self, doc):
-        return doc["value"].strip()
+        return doc["value"]
 
     def construct_requests(
         self, doc, ctx, chat_template=None, apply_chat_template=False, **kwargs
@@ -45,6 +46,7 @@ class FDA(ConfigurableTask):
             language description, as well as the few shot examples, and the question
             part of the document for `doc`.
         """
+
         return [
             Instance(
                 request_type="generate_until",
@@ -68,7 +70,7 @@ class FDA(ConfigurableTask):
         # continuation, (logprob_unanswerable, _) = results
         continuation = results
 
-        return {"contains": contains_score(continuation[0], [self.doc_to_target(doc)])}
+        return {"contains": contains_score(continuation[0], [doc["value"]])}
 
     def aggregation(self):
         """
@@ -91,7 +93,7 @@ class FDA(ConfigurableTask):
         }
 
 
-def contains_score(prediction: str, labels: list[str]):
+def contains_score(prediction: str, labels: List[str]):
     return max(
         int(bool(re.search(re.compile(re.escape(label), re.IGNORECASE), prediction)))
         for label in labels
