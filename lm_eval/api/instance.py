@@ -18,6 +18,7 @@ class Instance:
     )
     resps: list = field(default_factory=list)
     filtered_resps: dict = field(default_factory=dict)
+    generation_metadata: list = field(default_factory=list)
 
     # initialized after init
     task_name: Optional[str] = None

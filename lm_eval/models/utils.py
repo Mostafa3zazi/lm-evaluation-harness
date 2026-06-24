@@ -890,32 +890,40 @@ def maybe_truncate(
     return truncate_tokens(tokens, max_ctx_len, side=side), min_gen_toks
 
 
+import re
+
 def postprocess_generated_text(
-    generation: str, stop: list[str] | str | None, think_end_token: str | None
+    generation: str,
+    stop: list[str] | str | None,
+    think_end_token: str | None
 ) -> str:
-    """Post-processes the generated text by stripping stop sequences and optional thinking markers.
+    """
+    Post-processes the generated text by stripping stop sequences and optional thinking markers.
 
     Args:
         generation (str): The generated text to be processed.
         stop (list[str] | None): Stop sequence(s) to remove. Text is truncated
             at the first occurrence of any stop sequence.
-        think_end_token (str | None): Token marking end of thinking section. If provided,
-            returns only the text after this token (discarding thinking content).
+        think_end_token (str | None): Regex pattern marking end of thinking section.
+            If provided, returns only the text after the LAST match.
 
     Returns:
         str: The processed generation - text before stop sequences and after thinking sections.
     """
-    # Strip thinking content first so stop sequences apply to the response,
-    # not to the reasoning trace (which often contains \n\n etc.)
-    if think_end_token:
-        generation = generation.split(think_end_token)[-1].lstrip()
+    # Handle stop sequences (unchanged)
     if stop:
         stop = [stop] if isinstance(stop, str) else stop
         for term in stop:
             if len(term) > 0:
-                # ignore '' separator,
-                # for seq2seq case where self.tok_decode(self.eot_token_id) = ''
                 generation = generation.split(term)[0]
+
+    # Handle regex-based think_end_token
+    if think_end_token:
+        matches = list(re.finditer(think_end_token, generation))
+        if matches:
+            # Take everything after the last match
+            last_match = matches[-1]
+            generation = generation[last_match.end():].lstrip()
 
     return generation
 

@@ -193,6 +193,9 @@ class SampleResult(TypedDict, extra_items=float):
     Generation: ``list[str]``.
     Multiple-choice: ``list[list[str]]`` — per-choice ``[log_prob, is_greedy]``."""
 
+    generation_metadata: NotRequired[list[list[dict[str, Any]]]]
+    """Optional per-response generation metadata.  Per-request, then per-repeat."""
+
     filter: str
     """Name of the filter applied (e.g. ``"none"``, ``"strict-match"``)."""
 
