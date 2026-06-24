@@ -1,0 +1,5 @@
+"dataset_name": "Geography (High School)"
+"include": "_default_arabicmmlu_template_yaml"
+"tag": "arabicmmlu_social_science_tasks_gen"
+"task": "arabicmmlu_geography_high_school_gen"
+"task_alias": "Geography (High School)_gen"

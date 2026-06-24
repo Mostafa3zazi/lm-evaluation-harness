@@ -1,0 +1,5 @@
+"dataset_name": "History (Primary School)"
+"include": "_default_arabicmmlu_with_diacritics_template_yaml"
+"tag": "arabicmmlu_with_diacritics_humanities_tasks_gen"
+"task": "arabicmmlu_with_diacritics_history_primary_school_gen"
+"task_alias": "History (Primary School)_gen"

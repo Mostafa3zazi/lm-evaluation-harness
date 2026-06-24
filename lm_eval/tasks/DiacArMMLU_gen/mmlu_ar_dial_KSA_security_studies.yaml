@@ -1,0 +1,7 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_KSA_tasks_gen"
+"task": "mmlu_ar_dial_KSA_security_studies_gen"
+"task_alias": "KSA: security studies_gen"
+"description": "The following are multiple choice questions (with answers) about security
+  studies.\n"
+process_docs: !function utils.process_docs_KSA_security_studies

@@ -1,0 +1,94 @@
+task: ara_ifbench
+tag:
+  - instruction_following
+  - arabic
+custom_dataset: !function utils.load_dataset
+output_type: generate_until
+test_split: test
+num_fewshot: 0
+doc_to_text: !function utils.doc_to_text
+doc_to_target: 0
+generation_kwargs:
+  until:
+    - <end_of_turn>
+    - <eos>
+    - </s>
+    - <|end_of_text|>
+    - <|eot_id|>
+    - <|endoftext|>
+    - <|im_end|>
+  do_sample: false
+  temperature: 0.0
+  max_gen_toks: 1280
+process_results: !function utils.process_results
+metric_list:
+  - metric: prompt_level_strict_acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: inst_level_strict_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: prompt_level_loose_acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: inst_level_loose_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_count_length_strict_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_count_length_loose_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_format_structure_strict_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_format_structure_loose_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_position_linking_strict_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_position_linking_loose_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_copy_transform_strict_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_copy_transform_loose_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_sequence_composition_strict_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_sequence_composition_loose_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_arabic_script_digits_punct_strict_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_arabic_script_digits_punct_loose_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_arabic_diacritics_unicode_strict_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_arabic_diacritics_unicode_loose_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_arabic_surface_lexicon_strict_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_arabic_surface_lexicon_loose_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_arabic_morphology_lookup_strict_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: category_arabic_morphology_lookup_loose_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+metadata:
+  version: 1.0
+  repo_id: MBZUAI-IFM/ara-ifbench-wildchat
+  config_name: single_turn

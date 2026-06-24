@@ -1,0 +1,8 @@
+group: aradice_culture_gen
+task:
+  - AraDiCE_egypt_cultural_gen
+  - AraDiCE_jordan_cultural_gen
+  - AraDiCE_lebanon_cultural_gen
+  - AraDiCE_palestine_cultural_gen
+  - AraDiCE_qatar_cultural_gen
+  - AraDiCE_syria_cultural_gen

@@ -1,0 +1,5 @@
+"dataset_name": "Driving Test"
+"include": "_default_arabicmmlu_with_diacritics_template_yaml"
+"tag": "arabicmmlu_with_diacritics_other_tasks"
+"task": "arabicmmlu_with_diacritics_driving_test"
+"task_alias": "Driving Test"

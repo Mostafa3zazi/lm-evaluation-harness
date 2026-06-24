@@ -1,0 +1,29 @@
+test_split: test
+output_type: generate_until
+
+metric_list:
+  - metric: !function utils.exact_match_normalized_label
+    aggregation: mean
+    higher_is_better: true
+filter_list:
+  - name: extract_answer
+    filter:
+      - function: custom
+        filter_fn: !function utils.extract_bracketed_label
+dataset_path: tiiuae/NativeQA
+
+doc_to_text: !function utils.doc_to_text_native
+doc_to_target: !function utils.doc_to_target
+
+metadata:
+  version: 0.0
+generation_kwargs:
+  until:
+    - <end_of_turn>
+    - <eos>
+    - </s>
+    - <|end_of_text|>
+    - <|eot_id|>
+    - <|endoftext|>
+    - <|im_end|>
+  do_sample: false

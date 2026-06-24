@@ -1,0 +1,32 @@
+dataset_path: MBZUAI/ArabCulture
+test_split: test
+fewshot_split: test
+fewshot_config:
+  sampler: first_n
+output_type: generate_until
+doc_to_text: !function utils_mcq.doc_to_text
+doc_to_target: !function utils_mcq.doc_to_target
+target_delimiter: ""
+process_docs: !function utils_mcq.add_options_with_text
+
+metric_list:
+  - metric: !function utils_mcq.exact_match_normalized_label
+    aggregation: mean
+    higher_is_better: true
+filter_list:
+  - name: extract_answer
+    filter:
+      - function: custom
+        filter_fn: !function utils_mcq.extract_bracketed_label
+metadata:
+  version: 0.0
+generation_kwargs:
+  until:
+    - <end_of_turn>
+    - <eos>
+    - </s>
+    - <|end_of_text|>
+    - <|eot_id|>
+    - <|endoftext|>
+    - <|im_end|>
+  do_sample: false

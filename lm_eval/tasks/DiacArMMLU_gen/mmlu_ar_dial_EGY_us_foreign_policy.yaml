@@ -1,0 +1,7 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_EGY_tasks_gen"
+"task": "mmlu_ar_dial_EGY_us_foreign_policy_gen"
+"task_alias": "EGY: us foreign policy_gen"
+"description": "The following are multiple choice questions (with answers) about us
+  foreign policy.\n"
+process_docs: !function utils.process_docs_EGY_us_foreign_policy

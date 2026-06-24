@@ -1,0 +1,5 @@
+dataset_name: ben_Beng
+fewshot_split: test
+include: _default_template_yaml
+task: belebele_ben_Beng_gen
+test_split: test

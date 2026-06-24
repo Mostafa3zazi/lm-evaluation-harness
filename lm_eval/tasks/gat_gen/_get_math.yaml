@@ -1,0 +1,13 @@
+aggregate_metric_list:
+  metric: exact_match
+  weight_by_size: true
+group: gat_math_gen
+metadata:
+  description: General Aptitude Test for Math & Language Understanding
+  version: 0
+task:
+  - gat_math_geometry_gen
+  - gat_math_algebra_gen
+  - gat_math_arithmetic_gen
+  - gat_math_comparisons_gen
+

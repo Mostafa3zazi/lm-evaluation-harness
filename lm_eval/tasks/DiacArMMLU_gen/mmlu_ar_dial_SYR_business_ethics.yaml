@@ -1,0 +1,7 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_SYR_tasks_gen"
+"task": "mmlu_ar_dial_SYR_business_ethics_gen"
+"task_alias": "SYR: business ethics_gen"
+"description": "The following are multiple choice questions (with answers) about business
+  ethics.\n"
+process_docs: !function utils.process_docs_SYR_business_ethics

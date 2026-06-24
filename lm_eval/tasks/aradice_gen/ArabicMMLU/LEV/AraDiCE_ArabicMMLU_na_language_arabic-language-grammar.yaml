@@ -1,0 +1,10 @@
+"dataset_name": "na_language_arabic-language-grammar"
+"description": ""
+"fewshot_split":
+"include": "_default_template_yaml"
+"tag": "AraDiCE_ArabicMMLU_language_lev_gen"
+"task": "AraDiCE_ArabicMMLU_na_language_arabic-language-grammar_lev_gen"
+"task_alias": "na language arabic-language-grammar_gen"
+"test_split": "test"
+"training_split":
+"validation_split":

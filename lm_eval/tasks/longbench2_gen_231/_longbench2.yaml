@@ -1,0 +1,13 @@
+group: longbench2_gen
+task:
+  - longbench2_history_tasks_gen
+  - longbench2_incontext_tasks_gen
+  - longbench2_multi_tasks_gen
+  - longbench2_single_tasks_gen
+  - longbench2_structured_tasks_gen
+  - longbench2_code_gen
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: true
+metadata:
+  version: 0.0

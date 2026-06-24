@@ -1,0 +1,11 @@
+dataset_kwargs:
+  data_files:
+    test:
+      - AraSTEM/primary__science.json
+dataset_name:
+dataset_path: json
+
+include: _default_arastem_template_yaml
+# tag: arastem_primary_science
+task: arastem_primary_science_gen
+test_split: test

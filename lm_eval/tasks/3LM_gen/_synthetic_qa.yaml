@@ -1,0 +1,13 @@
+aggregate_metric_list:
+  metric: exact_match
+  weight_by_size: true
+group: 3lm_synthetic_qa_gen
+metadata:
+  description: 3LM Synthetic QA Tasks
+  version: 0
+task:
+  - 3lm_synthetic_qa_biology_gen
+  - 3lm_synthetic_qa_chemistry_gen
+  - 3lm_synthetic_qa_general_science_gen
+  - 3lm_synthetic_qa_math_gen
+  - 3lm_synthetic_qa_physics_gen

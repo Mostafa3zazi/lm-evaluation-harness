@@ -1,0 +1,17 @@
+group: belebele_arabic
+task:
+    - belebele_arb_Arab
+    - belebele_acm_Arab
+    - belebele_arz_Arab
+    - belebele_apc_Arab
+    - belebele_ars_Arab
+    - belebele_ary_Arab
+aggregate_metric_list:
+  - aggregation: mean
+    metric: acc
+    weight_by_size: true
+  - aggregation: mean
+    metric: acc_norm
+    weight_by_size: true
+metadata:
+  version: 0.1

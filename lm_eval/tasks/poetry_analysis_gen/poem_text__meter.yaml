@@ -1,0 +1,11 @@
+dataset_kwargs:
+  data_files:
+    test:
+      - poetry/50_verses/analysis_poem_text___meter.json
+dataset_name:
+dataset_path: json
+include: _default_poetry_analysis_template_yaml
+tag: poem_text__meter_task_gen
+task: poem_text__meter_gen
+# task_alias: ar_poem_text__meter
+test_split: test

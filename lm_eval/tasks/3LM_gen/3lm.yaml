@@ -1,0 +1,4 @@
+group: 3LM_gen
+task:
+  - 3lm_native_qa_gen
+  - 3lm_synthetic_qa_gen

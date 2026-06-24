@@ -1,0 +1,17 @@
+group: belebele_arabic_gen
+task:
+  - belebele_arb_Arab_gen
+  - belebele_acm_Arab_gen
+  - belebele_arz_Arab_gen
+  - belebele_apc_Arab_gen
+  - belebele_ars_Arab_gen
+  - belebele_ary_Arab_gen
+aggregate_metric_list:
+  - aggregation: mean
+    metric: exact_match
+    weight_by_size: true
+  - aggregation: mean
+    metric: acc_norm
+    weight_by_size: true
+metadata:
+  version: 0.1

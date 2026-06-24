@@ -1,0 +1,32 @@
+task: hmmt_2025
+dataset_path: json
+dataset_kwargs:
+  data_files:
+    test: /jais3/data/jais_2/benchmarks/HMMT25/HMMT_2025.jsonl
+test_split: test
+
+output_type: generate_until
+description: "You are a helpful assistant."
+num_fewshot: 0
+doc_to_text: !function utils.doc_to_text
+doc_to_target: !function utils.doc_to_target
+
+generation_kwargs:
+  until: []
+  do_sample: false
+  temperature: 0.0
+  max_gen_toks: 4096
+
+filter_list:
+  - name: "extract_answer"
+    filter:
+      - function: "hmmt_final_answer"
+
+process_results: !function utils.process_results
+metric_list:
+  - metric: math_equiv
+    aggregation: mean
+    higher_is_better: true
+
+metadata:
+  version: 1.0

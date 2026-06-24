@@ -1,0 +1,5 @@
+"dataset_name": "Geography (High School)"
+"include": "_default_arabicmmlu_with_diacritics_template_yaml"
+"tag": "arabicmmlu_with_diacritics_social_science_tasks_gen"
+"task": "arabicmmlu_with_diacritics_geography_high_school_gen"
+"task_alias": "Geography (High School)_gen"

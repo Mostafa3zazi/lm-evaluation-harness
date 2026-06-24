@@ -1,0 +1,5 @@
+"dataset_name": "General Knowledge (Middle School)"
+"include": "_default_arabicmmlu_with_diacritics_template_yaml"
+"tag": "arabicmmlu_with_diacritics_other_tasks_gen"
+"task": "arabicmmlu_with_diacritics_general_knowledge_middle_school_gen"
+"task_alias": "General Knowledge (Middle School)_gen"

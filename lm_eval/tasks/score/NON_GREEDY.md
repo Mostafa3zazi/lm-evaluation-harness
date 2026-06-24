@@ -33,13 +33,13 @@ To run the evaluation of the Non-Greedy tasks with 5 different seeds you should:
 
 2. Repeat the process for 5 times**, changing the `--seed` and the `--output_path` arguments accordingly from 1 to 5.
 
-3. When all 5 runs are finished and logs are saved, run the `./lm_eval/tasks/score/non_greedy_summarizer.py` script by passing the the output directory of the above runs to the `--log_dir` argument***, and by specifying the dataset name for which the evaluations were run with `--dataset` argument(`agieval`, `mmlu_pro` or `math`). \
+3. When all 5 runs are finished and logs are saved, run the `score/non_greedy_summarizer.py` script by passing the the output directory of the above runs to the `--log_dir` argument***, and by specifying the dataset name for which the evaluations were run with `--dataset` argument(`agieval`, `mmlu_pro` or `math`). \
 
 4. The script will return the default lm_evaluation_harness table where accuracies for each seed and the consistancy rate are calculated.
 
 
 \* _As this evaluation requires `--log_samples` to be True, it will need some extra disk space to save the prediction results for each seed._
 
-\*\* _Refer to [`./lm_eval/tasks/score/non_greedy.sh`](https://github.com/EleutherAI/lm-evaluation-harness/blob/main/lm_eval/tasks/score/non_greedy.sh) to see an example of non greedy evaluation command for each seed._
+\*\* _Refer to [`score/non_greedy.sh`](https://github.com/EleutherAI/lm-evaluation-harness/blob/main/lm_eval/tasks/score/non_greedy.sh) to see an example of non greedy evaluation command for each seed._
 
 \*\*\* _To `--log_dir` argument one should pass the path of the parent folder of `"seed_1", "seed_2", ...` directories, that is not necessarily the `--output_path` passed to the evaulater in the 1st step._

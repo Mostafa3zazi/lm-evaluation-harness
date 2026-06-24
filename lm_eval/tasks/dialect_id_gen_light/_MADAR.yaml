@@ -1,0 +1,15 @@
+group: dialect_id_MADAR_gen_light
+metadata:
+  description: Dialect identification for MADAR Benchmark
+  version: 0
+task:
+  - dialect_id_madar_acm_gen_light
+  - dialect_id_madar_aeb_gen_light
+  - dialect_id_madar_afb_gen_light
+  - dialect_id_madar_apc_gen_light
+  - dialect_id_madar_apd_gen_light
+  - dialect_id_madar_ar_gen_light
+  - dialect_id_madar_arq_gen_light
+  - dialect_id_madar_ars_gen_light
+  - dialect_id_madar_ary_gen_light
+  - dialect_id_madar_arz_gen_light

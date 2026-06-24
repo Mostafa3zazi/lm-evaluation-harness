@@ -1,0 +1,10 @@
+"dataset_name": "primary_stem_math"
+"description": ""
+"fewshot_split":
+"include": "_default_template_yaml"
+"tag": "AraDiCE_ArabicMMLU_stem_lev_gen"
+"task": "AraDiCE_ArabicMMLU_primary_stem_math_lev_gen"
+"task_alias": "primary stem math_gen"
+"test_split": "test"
+"training_split":
+"validation_split":

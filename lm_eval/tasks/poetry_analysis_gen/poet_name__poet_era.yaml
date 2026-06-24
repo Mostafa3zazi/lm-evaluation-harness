@@ -1,0 +1,11 @@
+dataset_kwargs:
+  data_files:
+    test:
+      - poetry/50_verses/analysis_poet_name___poet_era.json
+dataset_name:
+dataset_path: json
+include: _default_poetry_analysis_template_yaml
+tag: poet_name__poet_era_task_gen
+task: poet_name__poet_era_gen
+# task_alias: ar_poet_name__poet_era
+test_split: test

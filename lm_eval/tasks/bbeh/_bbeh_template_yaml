@@ -1,0 +1,22 @@
+dataset_path: jgyasu/bbeh
+output_type: generate_until
+test_split: train
+doc_to_text: "{{input}}\n\nThink step by step, and when you are ready to answer, conclude with \"The answer is: <answer>\"."
+doc_to_target: "{{target}}"
+process_results: !function utils.process_results
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+generation_kwargs:
+  until:
+    - <end_of_turn>
+    - <eos>
+    - </s>
+    - <|end_of_text|>
+    - <|eot_id|>
+    - <|endoftext|>
+    - <|im_end|>
+num_fewshot: 0
+metadata:
+  version: 1.0

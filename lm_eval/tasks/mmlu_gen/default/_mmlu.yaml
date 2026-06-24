@@ -1,0 +1,11 @@
+group: mmlu_gen
+task:
+  - mmlu_stem_gen
+  - mmlu_other_gen
+  - mmlu_social_sciences_gen
+  - mmlu_humanities_gen
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: true
+metadata:
+  version: 2

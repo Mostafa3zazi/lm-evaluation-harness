@@ -1,0 +1,7 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_MAG_tasks_gen"
+"task": "mmlu_ar_dial_MAG_abstract_algebra_gen"
+"task_alias": "MAG: abstract algebra_gen"
+"description": "The following are multiple choice questions (with answers) about abstract
+  algebra.\n"
+process_docs: !function utils.process_docs_MAG_abstract_algebra

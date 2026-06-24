@@ -1,0 +1,13 @@
+aggregate_metric_list:
+  metric: exact_match
+  weight_by_size: true
+group: 3lm_native_qa_gen
+metadata:
+  description: 3LM Native QA Tasks
+  version: 0
+task:
+  - 3lm_native_qa_biology_gen
+  - 3lm_native_qa_chemistry_gen
+  - 3lm_native_qa_geography_gen
+  - 3lm_native_qa_math_gen
+  - 3lm_native_qa_physics_gen

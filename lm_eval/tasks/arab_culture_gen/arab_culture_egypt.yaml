@@ -1,0 +1,5 @@
+"dataset_name": "Egypt"
+"include": "_default_arab_culture_mcq_template_yaml"
+"tag": "arab_culture_nile_valley_tasks_gen"
+"task": "arab_culture_egypt_gen"
+"task_alias": "Egypt_gen"

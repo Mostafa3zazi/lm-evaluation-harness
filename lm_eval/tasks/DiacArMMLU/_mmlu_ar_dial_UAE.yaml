@@ -1,0 +1,9 @@
+group: mmlu_ar_dial_UAE
+group_alias: UAE
+task:
+  - mmlu_ar_dial_UAE_tasks
+aggregate_metric_list:
+  - metric: acc
+    weight_by_size: True
+metadata:
+  version: 1

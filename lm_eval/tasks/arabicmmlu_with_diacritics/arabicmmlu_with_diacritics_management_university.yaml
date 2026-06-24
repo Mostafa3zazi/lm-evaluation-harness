@@ -1,0 +1,5 @@
+"dataset_name": "Management (University)"
+"include": "_default_arabicmmlu_with_diacritics_template_yaml"
+"tag": "arabicmmlu_with_diacritics_other_tasks"
+"task": "arabicmmlu_with_diacritics_management_university"
+"task_alias": "Management (University)"

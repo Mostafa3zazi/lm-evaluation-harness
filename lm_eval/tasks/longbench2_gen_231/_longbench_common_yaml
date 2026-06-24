@@ -1,0 +1,33 @@
+dataset_path: json
+dataset_kwargs:
+  data_files:
+    train: ./long_bench_v2/longbench_v2_under_100k.json
+test_split: train
+output_type: generate_until
+doc_to_text: "Please read the following text and answer the question below.\n\n<text>\n\
+  {{context}}\n</text>\n\nWhat is the correct answer to this question: {{question.strip()}}\n\
+  Choices:\n(A) {{choice_A}}\n(B) {{choice_B}}\n(C) {{choice_C}}\n(D) {{choice_D}}\n\
+  \n# Instruction\nReturn only the final answer as the option letter inside double
+  square brackets.\nValid outputs are only:\n[[A]], [[B]], [[C]], or [[D]]\n\nAnswer:"
+doc_to_target: answer
+metric_list:
+  - metric: !function utils.exact_match_normalized_label
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 0.0
+generation_kwargs:
+  until:
+    - <end_of_turn>
+    - <|im_end|>
+    - <eos>
+    - </s>
+    - <|end_of_text|>
+    - <|eot_id|>
+    - <|endoftext|>
+  do_sample: false
+filter_list:
+  - name: extract_answer
+    filter:
+      - function: custom
+        filter_fn: !function utils.extract_bracketed_label

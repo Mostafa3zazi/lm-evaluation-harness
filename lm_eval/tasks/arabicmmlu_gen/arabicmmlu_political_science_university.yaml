@@ -1,0 +1,5 @@
+"dataset_name": "Political Science (University)"
+"include": "_default_arabicmmlu_template_yaml"
+"tag": "arabicmmlu_social_science_tasks_gen"
+"task": "arabicmmlu_political_science_university_gen"
+"task_alias": "Political Science (University)_gen"

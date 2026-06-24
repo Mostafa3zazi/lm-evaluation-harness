@@ -1,0 +1,12 @@
+group: AraDiCE_ArabicMMLU_egy_gen
+task:
+  - AraDiCE_ArabicMMLU_humanities_egy_gen
+  - AraDiCE_ArabicMMLU_language_egy_gen
+  - AraDiCE_ArabicMMLU_social-science_egy_gen
+  - AraDiCE_ArabicMMLU_stem_egy_gen
+  - AraDiCE_ArabicMMLU_other_egy_gen
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: true
+  - metric: acc_norm
+    weight_by_size: true

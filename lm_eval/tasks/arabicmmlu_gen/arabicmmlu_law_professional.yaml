@@ -1,0 +1,5 @@
+"dataset_name": "Law (Professional)"
+"include": "_default_arabicmmlu_template_yaml"
+"tag": "arabicmmlu_humanities_tasks_gen"
+"task": "arabicmmlu_law_professional_gen"
+"task_alias": "Law (Professional)_gen"

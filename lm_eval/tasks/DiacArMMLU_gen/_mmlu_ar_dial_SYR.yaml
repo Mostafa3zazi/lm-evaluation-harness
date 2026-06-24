@@ -1,0 +1,9 @@
+group: mmlu_ar_dial_SYR_gen
+group_alias: SYR_gen
+task:
+  - mmlu_ar_dial_SYR_tasks_gen
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: true
+metadata:
+  version: 1

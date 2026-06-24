@@ -1,0 +1,7 @@
+include: _longbench2_en_gen_common_yaml
+tag:
+  - longbench2_english_tasks_gen
+task: longbench2_en_detective_gen
+dataset_kwargs:
+  data_files:
+    train: ./long_bench_v2/longbench_v2_ar_detective.json

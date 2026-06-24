@@ -1,0 +1,37 @@
+dataset_path: Idavidrein/gpqa
+tag: gpqa_gen
+output_type: generate_until
+
+process_docs: !function utils.process_docs
+
+training_split: train
+# Because huggingface dataset only has train split
+validation_split: train
+test_split: null
+# doc_to_text: "What is the correct answer to this question:{{Question}}\nChoices:\n(A) {{choice1}}\n(B) {{choice2}}\n(C) {{choice3}}\n(D) {{choice4}}\nAnswer:"
+doc_to_text: !function utils.doc_to_text
+doc_to_target: !function utils.doc_to_target
+
+num_fewshot: 0
+
+metric_list:
+  - metric: !function utils.exact_match_normalized_label
+    aggregation: mean
+    higher_is_better: true
+filter_list:
+  - name: extract_answer
+    filter:
+      - function: custom
+        filter_fn: !function utils.extract_bracketed_label
+metadata:
+  version: 1.0
+generation_kwargs:
+  until:
+    - <end_of_turn>
+    - <eos>
+    - </s>
+    - <|end_of_text|>
+    - <|eot_id|>
+    - <|endoftext|>
+    - <|im_end|>
+  do_sample: false

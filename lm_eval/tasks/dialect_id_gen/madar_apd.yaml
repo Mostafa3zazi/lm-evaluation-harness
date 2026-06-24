@@ -1,0 +1,6 @@
+task: dialect_id_madar_apd_gen
+dataset_kwargs:
+  data_files:
+    test: dialect_id/MADAR_apd.json
+
+include: _default_template_yaml

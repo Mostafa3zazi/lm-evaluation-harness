@@ -1,0 +1,46 @@
+tag:
+  - math_word_problems
+task: arabic_gsm8k_cot_zeroshot
+# dataset_name: main_test
+dataset_path: Omartificial-Intelligence-Space/Arabic-gsm8k
+output_type: generate_until
+training_split: main_train
+fewshot_split: main_train
+test_split: main_test
+doc_to_text: "السؤال: {{question}}\nالجواب: دعنا نفكر خطوة بخطوة."
+doc_to_target: "{{answer}}" #" {{answer.split('### ')[-1].rstrip()}}"
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: false
+    regexes_to_ignore:
+      - ","
+      - "\\$"
+      - "(?s).*#### "
+      - "\\.$"
+generation_kwargs:
+  until:
+    - "Q:"
+    - "</s>"
+    - "<|im_end|>"
+    - "<|eot_id|>"
+    - "<|endoftext|>"
+  do_sample: false
+repeats: 1
+num_fewshot: 0
+filter_list:
+  - name: "strict-match"
+    filter:
+      - function: "regex"
+        regex_pattern: "(?:The answer is|الإجابة هي|The final answer is|الإجابة النهائية هي) (\\-?[0-9\\.,]+)"
+      - function: "take_first"
+  - name: "flexible-extract"
+    filter:
+      - function: "regex"
+        group_select: -1
+        regex_pattern: "(?:The answer is|الإجابة هي|The final answer is|الإجابة النهائية هي) (\\-?[0-9\\.,]+)"
+      - function: "take_first"
+metadata:
+  version: 1.0

@@ -1,0 +1,6 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_MAG_tasks_gen"
+"task": "mmlu_ar_dial_MAG_philosophy_gen"
+"task_alias": "MAG: philosophy_gen"
+"description": "The following are multiple choice questions (with answers) about philosophy.\n"
+process_docs: !function utils.process_docs_MAG_philosophy

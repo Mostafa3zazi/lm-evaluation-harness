@@ -1,0 +1,11 @@
+dataset_kwargs:
+  data_files:
+    test:
+      - AraSTEM/college__medicine.json
+dataset_name: null
+dataset_path: json
+
+include: _default_arastem_template_yaml
+# tag: arastem_college_medicine
+task: arastem_college_medicine
+test_split: test

@@ -1,0 +1,6 @@
+task: dialect_id_qadi_apc
+dataset_kwargs:
+  data_files:
+    test: dialect_id/QADI_apc.json
+
+include: _default_template_yaml

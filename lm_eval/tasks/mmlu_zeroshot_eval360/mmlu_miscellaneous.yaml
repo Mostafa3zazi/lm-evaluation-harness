@@ -1,0 +1,4 @@
+"dataset_name": "miscellaneous"
+"tag": "mmlu_zeroshot_eval360_tasks"
+"include": "_mmlu_zeroshot_eval360_template_yaml"
+"task": "mmlu_zeroshot_eval360_miscellaneous"

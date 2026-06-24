@@ -1,0 +1,3 @@
+include: _bbeh_template_yaml
+task: bbeh_spatial_reasoning
+dataset_name: spatial_reasoning

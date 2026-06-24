@@ -1,0 +1,8 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_ENG_tasks"
+"task": "mmlu_ar_dial_ENG_global_facts"
+"task_alias": "ENG: global facts"
+"description": "The following are multiple choice questions (with answers) about global facts.
+
+"
+process_docs: !function utils.process_docs_ENG_global_facts

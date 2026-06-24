@@ -1,0 +1,10 @@
+"dataset_name": "middle_language_arabic-language"
+"description": ""
+"fewshot_split":
+"include": "_default_template_yaml"
+"tag": "AraDiCE_ArabicMMLU_language_egy_gen"
+"task": "AraDiCE_ArabicMMLU_middle_language_arabic-language_egy_gen"
+"task_alias": "middle language arabic-language_gen"
+"test_split": "test"
+"training_split":
+"validation_split":

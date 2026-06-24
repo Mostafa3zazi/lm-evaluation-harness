@@ -1,0 +1,9 @@
+group: mmlu_other_gen
+group_alias: other_gen
+task:
+  - mmlu_other_tasks_gen
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: true
+metadata:
+  version: 2

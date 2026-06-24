@@ -1,0 +1,11 @@
+dataset_kwargs:
+  data_files:
+    test:
+      - AraSTEM/secondary__physics.json
+dataset_name:
+dataset_path: json
+
+include: _default_arastem_template_yaml
+# tag: arastem_secondary_physics
+task: arastem_secondary_physics_gen
+test_split: test

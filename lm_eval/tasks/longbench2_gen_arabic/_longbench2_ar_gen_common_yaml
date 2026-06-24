@@ -1,0 +1,31 @@
+dataset_path: json
+test_split: train
+output_type: generate_until
+doc_to_text: "يرجى قراءة النص التالي والإجابة عن السؤال أدناه.\n\n<text>\n{{context}}\n\
+  </text>\n\nما هي الإجابة الصحيحة على هذا السؤال: {{question.strip()}}\nالخيارات:\n\
+  (A) {{choice_A}}\n(B) {{choice_B}}\n(C) {{choice_C}}\n(D) {{choice_D}}\n\n# التعليمات\n\
+  أعد فقط الإجابة النهائية على شكل حرف الخيار داخل أقواس مربعة مزدوجة.\nالمخرجات المسموح\
+  \ بها فقط هي:\n[[A]]، [[B]]، [[C]]، أو [[D]]\n\nالإجابة:"
+doc_to_target: answer
+process_docs: !function utils.add_options_with_text
+metric_list:
+  - metric: !function utils.exact_match_normalized_label
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 0.0
+generation_kwargs:
+  until:
+    - <end_of_turn>
+    - <|im_end|>
+    - <eos>
+    - </s>
+    - <|end_of_text|>
+    - <|eot_id|>
+    - <|endoftext|>
+  do_sample: false
+filter_list:
+  - name: extract_answer
+    filter:
+      - function: custom
+        filter_fn: !function utils.extract_bracketed_label

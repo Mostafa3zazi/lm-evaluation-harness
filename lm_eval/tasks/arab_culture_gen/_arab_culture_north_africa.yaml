@@ -1,0 +1,10 @@
+aggregate_metric_list:
+  metric: exact_match
+  weight_by_size: true
+group: arab_culture_north_africa_gen
+group_alias: North Africa_gen
+metadata:
+  description: arab Culture tasks
+  version: 0
+task:
+  - arab_culture_north_africa_tasks_gen

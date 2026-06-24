@@ -1,0 +1,9 @@
+group: mmlu_ar_dial_ENG
+group_alias: ENG
+task:
+  - mmlu_ar_dial_ENG_tasks
+aggregate_metric_list:
+  - metric: acc
+    weight_by_size: True
+metadata:
+  version: 1

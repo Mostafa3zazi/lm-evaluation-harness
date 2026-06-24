@@ -1,0 +1,16 @@
+group: dialect_id_QADI_gen
+metadata:
+  description: Dialect identification for QADI Benchmark
+  version: 0
+task:
+  - dialect_id_qadi_acx_gen
+  - dialect_id_qadi_aeb_gen
+  - dialect_id_qadi_afb_gen
+  - dialect_id_qadi_apc_gen
+  - dialect_id_qadi_apd_gen
+  - dialect_id_qadi_ar_gen
+  - dialect_id_qadi_ars_gen
+  - dialect_id_qadi_ary_gen
+  - dialect_id_qadi_arz_gen
+  - dialect_id_qadi_avb_gen
+  - dialect_id_qadi_ayl_gen

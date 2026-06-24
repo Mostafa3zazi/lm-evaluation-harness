@@ -1,0 +1,3 @@
+include: _bbeh_template_yaml
+task: bbeh_disambiguation_qa
+dataset_name: disambiguation_qa

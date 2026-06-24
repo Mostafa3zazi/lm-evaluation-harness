@@ -1,0 +1,6 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_UAE_tasks_gen"
+"task": "mmlu_ar_dial_UAE_astronomy_gen"
+"task_alias": "UAE: astronomy_gen"
+"description": "The following are multiple choice questions (with answers) about astronomy.\n"
+process_docs: !function utils.process_docs_UAE_astronomy

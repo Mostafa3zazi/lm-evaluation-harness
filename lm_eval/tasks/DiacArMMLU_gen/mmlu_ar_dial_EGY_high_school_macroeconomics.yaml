@@ -1,0 +1,7 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_EGY_tasks_gen"
+"task": "mmlu_ar_dial_EGY_high_school_macroeconomics_gen"
+"task_alias": "EGY: high school macroeconomics_gen"
+"description": "The following are multiple choice questions (with answers) about high
+  school macroeconomics.\n"
+process_docs: !function utils.process_docs_EGY_high_school_macroeconomics

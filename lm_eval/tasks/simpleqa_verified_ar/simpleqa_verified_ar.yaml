@@ -1,0 +1,32 @@
+task: simpleqa_verified_ar
+# Arabic SimpleQA-Verified: the 1000 SimpleQA-Verified items with human-verified Arabic
+# translations (problem_ar / answer_ar). Data lives under the project's LOCAL_BENCHMARK_PATH
+# (configs.py), same convention as hmmt_2025 -- not vendored in this task dir.
+dataset_path: json
+dataset_kwargs:
+  data_files:
+    test: /jais3/data/jais_2/benchmarks/SimpleQA_Verified_AR/simpleqa_verified_ar.jsonl
+test_split: test
+output_type: generate_until
+doc_to_text: "{{problem_ar}}"
+doc_to_target: "{{answer_ar}}"
+# Free-form Arabic factuality. The metric below is the AUTOMATED baseline (Arabic-normalized
+# exact_match + cover_match). The real score comes from the LLM judge (judge_vllm.py): the ternary
+# grader (judge_prompts.factuality_prompt -> SimpleQAJudgeOutputSchema, grade A/B/C) adds
+# acc / correct / incorrect / not_attempted / correct_given_attempted / f_score under separate keys.
+metric_list:
+  - metric: !function utils.simpleqa_ar_automated_metrics
+    aggregation: mean
+    higher_is_better: true
+generation_kwargs:
+  until:
+    - <end_of_turn>
+    - <eos>
+    - </s>
+    - <|end_of_text|>
+    - <|eot_id|>
+    - <|endoftext|>
+    - <|im_end|>
+  do_sample: false
+metadata:
+  version: 1.0

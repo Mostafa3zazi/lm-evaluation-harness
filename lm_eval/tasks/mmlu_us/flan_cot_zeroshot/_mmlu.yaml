@@ -1,0 +1,12 @@
+group: mmlu_us_gen
+group_alias: mmlu (flan style, zeroshot cot)
+task:
+  - mmlu_us_gen_stem
+  - mmlu_us_gen_other
+  - mmlu_us_gen_social_sciences
+  - mmlu_us_gen_humanities
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: True
+metadata:
+  version: 2

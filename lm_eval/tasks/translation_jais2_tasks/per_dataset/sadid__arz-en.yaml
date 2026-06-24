@@ -1,0 +1,8 @@
+include: _default_translation_template_yaml
+
+task: translation_sadid__arz-en
+dataset_kwargs:
+  data_files:
+    test: ./translation/per_dataset/sadid__arz-en.json
+
+doc_to_text: "ترجم ما يلي من اللهجة المصرية إلى اللغة الإنجليزية:\n{{ input }}"

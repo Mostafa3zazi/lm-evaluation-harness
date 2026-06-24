@@ -1,0 +1,6 @@
+"dataset_name": "philosophy"
+"description": "The following are multiple choice questions (with answers) about philosophy.\n\
+  \n"
+"tag": "mmlu_us_gen_humanities"
+"include": "_mmlu_us_gen_template_yaml"
+"task": "mmlu_us_gen_philosophy"

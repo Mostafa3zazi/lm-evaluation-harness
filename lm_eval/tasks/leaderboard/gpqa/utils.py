@@ -1,12 +1,7 @@
-from __future__ import annotations
-
 import random
 import re
-from typing import TYPE_CHECKING
 
-
-if TYPE_CHECKING:
-    import datasets
+import datasets
 
 
 def preprocess(text):

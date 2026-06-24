@@ -1,0 +1,27 @@
+task: AraDiCE_openbookqa_lev_gen
+dataset_path: QCRI/AraDiCE-OpenBookQA
+dataset_name: OBQA-lev
+training_split:
+validation_split:
+test_split: test
+output_type: generate_until
+doc_to_text: !function utils.doc_to_text
+doc_to_target: !function utils.doc_to_target
+should_decontaminate: true
+doc_to_decontamination_query: "{{question.stem}}"
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0
+generation_kwargs:
+  until:
+    - <end_of_turn>
+    - <eos>
+    - </s>
+    - <|end_of_text|>
+    - <|eot_id|>
+    - <|endoftext|>
+    - <|im_end|>
+  do_sample: false

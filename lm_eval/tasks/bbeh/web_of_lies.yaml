@@ -1,0 +1,3 @@
+include: _bbeh_template_yaml
+task: bbeh_web_of_lies
+dataset_name: web_of_lies

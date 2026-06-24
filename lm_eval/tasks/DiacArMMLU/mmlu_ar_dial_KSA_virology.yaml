@@ -1,0 +1,8 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_KSA_tasks"
+"task": "mmlu_ar_dial_KSA_virology"
+"task_alias": "KSA: virology"
+"description": "The following are multiple choice questions (with answers) about virology.
+
+"
+process_docs: !function utils.process_docs_KSA_virology

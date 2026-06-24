@@ -1,0 +1,11 @@
+dataset_kwargs:
+  data_files:
+    test:
+      - AraSTEM/secondary__chemistry.json
+dataset_name:
+dataset_path: json
+
+include: _default_arastem_template_yaml
+# tag: arastem_secondary_chemistry
+task: arastem_secondary_chemistry_gen
+test_split: test

@@ -1,0 +1,3 @@
+include: _bbeh_template_yaml
+task: bbeh_sportqa
+dataset_name: sportqa

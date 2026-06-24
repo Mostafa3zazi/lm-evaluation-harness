@@ -1,0 +1,8 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_MSA_tasks"
+"task": "mmlu_ar_dial_MSA_public_relations"
+"task_alias": "MSA: public relations"
+"description": "The following are multiple choice questions (with answers) about public relations.
+
+"
+process_docs: !function utils.process_docs_MSA_public_relations

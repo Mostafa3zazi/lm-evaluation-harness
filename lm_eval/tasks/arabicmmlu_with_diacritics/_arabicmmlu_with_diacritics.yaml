@@ -1,0 +1,12 @@
+group: arabicmmlu_with_diacritics
+task:
+- arabicmmlu_with_diacritics_humanities
+- arabicmmlu_with_diacritics_other
+- arabicmmlu_with_diacritics_stem
+- arabicmmlu_with_diacritics_social_science
+- arabicmmlu_with_diacritics_language
+aggregate_metric_list:
+  - metric: acc
+    weight_by_size: True
+metadata:
+  version: 1

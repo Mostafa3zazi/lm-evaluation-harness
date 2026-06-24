@@ -1,0 +1,9 @@
+group: mmlu_ar_dial_MAG
+group_alias: MAG
+task:
+  - mmlu_ar_dial_MAG_tasks
+aggregate_metric_list:
+  - metric: acc
+    weight_by_size: True
+metadata:
+  version: 1

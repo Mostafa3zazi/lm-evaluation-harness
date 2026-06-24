@@ -1,0 +1,5 @@
+group: 3LM
+task:
+- 3lm_native_qa
+- 3lm_synthetic_qa
+

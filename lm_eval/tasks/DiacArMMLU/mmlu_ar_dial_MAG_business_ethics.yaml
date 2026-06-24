@@ -1,0 +1,8 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_MAG_tasks"
+"task": "mmlu_ar_dial_MAG_business_ethics"
+"task_alias": "MAG: business ethics"
+"description": "The following are multiple choice questions (with answers) about business ethics.
+
+"
+process_docs: !function utils.process_docs_MAG_business_ethics

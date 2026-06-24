@@ -1,0 +1,5 @@
+"dataset_name": "Computer Science (Primary School)"
+"include": "_default_arabicmmlu_with_diacritics_template_yaml"
+"tag": "arabicmmlu_with_diacritics_stem_tasks_gen"
+"task": "arabicmmlu_with_diacritics_computer_science_primary_school_gen"
+"task_alias": "Computer Science (Primary School)_gen"

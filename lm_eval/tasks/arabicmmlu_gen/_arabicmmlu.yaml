@@ -1,0 +1,12 @@
+group: arabicmmlu_gen
+task:
+  - arabicmmlu_other_gen
+  - arabicmmlu_social_science_gen
+  - arabicmmlu_humanities_gen
+  - arabicmmlu_stem_gen
+  - arabicmmlu_language_gen
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: true
+metadata:
+  version: 1

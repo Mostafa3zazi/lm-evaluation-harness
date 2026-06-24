@@ -1,0 +1,19 @@
+group: arastem_gen
+metadata:
+  description: AraSTEM tasks
+  version: 0
+task:
+  - arastem_primary_math_gen
+  - arastem_primary_science_gen
+  - arastem_secondary_biology_gen
+  - arastem_secondary_chemistry_gen
+  - arastem_secondary_math_gen
+  - arastem_secondary_physics_gen
+  - arastem_secondary_science_gen
+  - arastem_college_biology_gen
+  - arastem_college_chemistry_gen
+  - arastem_college_dentistry_gen
+  - arastem_college_information_technology_gen
+  - arastem_college_medicine_gen
+  - arastem_college_pharmacy_gen
+  - arastem_college_physics_gen

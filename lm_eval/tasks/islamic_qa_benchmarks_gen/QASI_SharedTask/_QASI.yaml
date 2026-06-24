@@ -1,0 +1,7 @@
+group: islamic_qa_QASI_gen
+metadata:
+  description: QASI Benchmark for Islamic QA
+  version: 0
+task:
+  - islamic_qa_QASI_1_gen
+  - islamic_qa_QASI_2_gen

@@ -1,0 +1,8 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_MAG_tasks"
+"task": "mmlu_ar_dial_MAG_moral_scenarios"
+"task_alias": "MAG: moral scenarios"
+"description": "The following are multiple choice questions (with answers) about moral scenarios.
+
+"
+process_docs: !function utils.process_docs_MAG_moral_scenarios

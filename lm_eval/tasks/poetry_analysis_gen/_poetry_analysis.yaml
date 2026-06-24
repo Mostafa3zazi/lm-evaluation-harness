@@ -1,0 +1,22 @@
+group: poetry_analysis_gen
+task:
+  - poem_text__genre_gen
+  - poem_text__keywords_gen
+  - poem_text__meter_gen
+  - poem_text__poem_title_gen
+  - poem_text__poet_era_gen
+  - poem_text__poet_name_gen
+  - poem_text__poet_name__genre_gen
+  - poem_text__poet_name__meter_gen
+  - poem_text__poet_name__poet_era_gen
+  - poem_text__poet_name__rhyme_gen
+  - poet_name__genre_gen
+  - poet_name__meter_gen
+  - poet_name__poet_era_gen
+  - genre__poem_text__poet_name__meter_gen
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: true
+metadata:
+  description: Poetry analysis tasks
+  version: 0

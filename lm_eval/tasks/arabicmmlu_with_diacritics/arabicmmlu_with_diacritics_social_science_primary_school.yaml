@@ -1,0 +1,5 @@
+"dataset_name": "Social Science (Primary School)"
+"include": "_default_arabicmmlu_with_diacritics_template_yaml"
+"tag": "arabicmmlu_with_diacritics_social_science_tasks"
+"task": "arabicmmlu_with_diacritics_social_science_primary_school"
+"task_alias": "Social Science (Primary School)"

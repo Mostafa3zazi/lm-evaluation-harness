@@ -1,0 +1,5 @@
+"dataset_name": "Syria"
+"include": "_default_arab_culture_mcq_template_yaml"
+"tag": "arab_culture_levant_tasks_gen"
+"task": "arab_culture_syria_gen"
+"task_alias": "Syria_gen"

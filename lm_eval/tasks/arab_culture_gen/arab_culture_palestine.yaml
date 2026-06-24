@@ -1,0 +1,5 @@
+"dataset_name": "Palestine"
+"include": "_default_arab_culture_mcq_template_yaml"
+"tag": "arab_culture_levant_tasks_gen"
+"task": "arab_culture_palestine_gen"
+"task_alias": "Palestine_gen"

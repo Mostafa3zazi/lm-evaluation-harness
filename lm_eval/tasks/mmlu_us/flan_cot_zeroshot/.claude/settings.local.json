@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv _mmlu_flan_cot_zeroshot_template_yaml _mmlu_us_template_yaml)",
+      "Bash(sed -i 's/mmlu_flan_cot_zeroshot/mmlu_us/g' *.yaml)",
+      "Read(//scratch/ad_shared/code/jais-3-evals/lm-evaluation-harness/**)",
+      "Bash(sed -n '755,776p' lm_eval/api/task.py)",
+      "Bash(python -c ' *)",
+      "Bash(mv _mmlu_us_template_yaml _mmlu_us_gen_template_yaml)",
+      "Bash(sed -i 's/mmlu_us/mmlu_us_gen/g' *.yaml)",
+      "Bash(grep -l \"mmlu_us[^_g]\" *.yaml)"
+    ]
+  }
+}

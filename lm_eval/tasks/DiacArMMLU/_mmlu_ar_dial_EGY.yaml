@@ -1,0 +1,9 @@
+group: mmlu_ar_dial_EGY
+group_alias: EGY
+task:
+  - mmlu_ar_dial_EGY_tasks
+aggregate_metric_list:
+  - metric: acc
+    weight_by_size: True
+metadata:
+  version: 1

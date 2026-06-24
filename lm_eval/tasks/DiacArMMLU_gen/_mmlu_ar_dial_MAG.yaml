@@ -1,0 +1,9 @@
+group: mmlu_ar_dial_MAG_gen
+group_alias: MAG_gen
+task:
+  - mmlu_ar_dial_MAG_tasks_gen
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: true
+metadata:
+  version: 1

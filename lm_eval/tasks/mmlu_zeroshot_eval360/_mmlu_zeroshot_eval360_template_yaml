@@ -1,0 +1,51 @@
+dataset_path: cais/mmlu
+test_split: test
+fewshot_split: dev
+output_type: generate_until
+# eval-360 `mmlu_zeroshot` prompt (MMLU-Pro-style reprompt): the subject intro,
+# the reasoning instruction, the question, the A./B./C./D. options and the
+# "Answer: Let's think step by step." cue ALL live in the single user turn --
+# there is NO system message (so `description` is intentionally omitted).
+doc_to_text: |-
+  The following are multiple choice questions (with answers) about {{subject | replace("_", " ")}}. Think step by step and then finish your answer with "the answer is (X)" where X is the correct letter choice.
+  Question:
+  {{question.strip()}}
+  Options:
+  A. {{choices[0]}}
+  B. {{choices[1]}}
+  C. {{choices[2]}}
+  D. {{choices[3]}}
+  Answer: Let's think step by step.
+doc_to_target: "{{['A', 'B', 'C', 'D'][answer]}}"
+filter_list:
+  - name: "eval360-mc"
+    filter:
+      - function: !function utils.Eval360MCAnswerFilter
+      - function: "take_first"
+generation_kwargs:
+  until:
+    - <end_of_turn>
+    - <eos>
+    - </s>
+    - <|end_of_text|>
+    - <|eot_id|>
+    - <|endoftext|>
+    - <|im_end|>
+  # eval-360 mmlu_zeroshot sampling. This reasoning model degenerates into
+  # repetition loops under greedy decoding (temperature=0) -- a chunk of chains
+  # loop until the token cap and never emit "the answer is X" -- so eval-360
+  # samples. `top_p` is set here because eval.py does not pass it; eval.py's
+  # --gen_kwargs supplies temperature / do_sample / max_gen_toks and
+  # merge-overrides the temperature / do_sample below.
+  do_sample: true
+  temperature: 1.0
+  top_p: 0.95
+num_fewshot: 0
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+metadata:
+  version: 1

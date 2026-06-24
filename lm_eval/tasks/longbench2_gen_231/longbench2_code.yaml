@@ -1,0 +1,5 @@
+include: _longbench_common_yaml
+tag:
+  - longbench2_tasks_gen
+task: longbench2_code_gen
+process_docs: !function utils.filter_code

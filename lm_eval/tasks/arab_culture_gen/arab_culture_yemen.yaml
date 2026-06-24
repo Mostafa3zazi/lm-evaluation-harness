@@ -1,0 +1,5 @@
+"dataset_name": "Yemen"
+"include": "_default_arab_culture_mcq_template_yaml"
+"tag": "arab_culture_gulf_tasks_gen"
+"task": "arab_culture_yemen_gen"
+"task_alias": "Yemen_gen"

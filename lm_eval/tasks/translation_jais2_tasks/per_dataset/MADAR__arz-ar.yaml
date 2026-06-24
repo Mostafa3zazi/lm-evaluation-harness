@@ -1,0 +1,8 @@
+include: _default_translation_template_yaml
+
+task: translation_MADAR__arz-ar
+dataset_kwargs:
+  data_files:
+    test: ./translation/per_dataset/MADAR__arz-ar.json
+
+doc_to_text: "ترجم ما يلي من اللهجة المصرية إلى اللغة العربية:\n{{ input }}"

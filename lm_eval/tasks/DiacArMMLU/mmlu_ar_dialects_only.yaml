@@ -1,0 +1,14 @@
+group: mmlu_ar_dialects_only
+task:
+# - mmlu_ar_dial_ENG
+# - mmlu_ar_dial_MSA
+- mmlu_ar_dial_EGY
+- mmlu_ar_dial_KSA
+- mmlu_ar_dial_MAG
+- mmlu_ar_dial_SYR
+- mmlu_ar_dial_UAE
+aggregate_metric_list:
+  - metric: acc
+    weight_by_size: True
+metadata:
+  version: 1

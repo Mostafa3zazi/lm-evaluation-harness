@@ -1,0 +1,10 @@
+"dataset_name": "primary_other_general-knowledge"
+"description": ""
+"fewshot_split":
+"include": "_default_template_yaml"
+"tag": "AraDiCE_ArabicMMLU_other_egy_gen"
+"task": "AraDiCE_ArabicMMLU_primary_other_general-knowledge_egy_gen"
+"task_alias": "primary other general-knowledge_gen"
+"test_split": "test"
+"training_split":
+"validation_split":

@@ -1,0 +1,9 @@
+group: arabicmmlu_social_science_gen
+group_alias: Social Science_gen
+task:
+  - arabicmmlu_social_science_tasks_gen
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: true
+metadata:
+  version: 1

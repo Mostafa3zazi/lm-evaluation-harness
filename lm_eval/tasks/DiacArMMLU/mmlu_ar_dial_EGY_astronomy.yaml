@@ -1,0 +1,8 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_EGY_tasks"
+"task": "mmlu_ar_dial_EGY_astronomy"
+"task_alias": "EGY: astronomy"
+"description": "The following are multiple choice questions (with answers) about astronomy.
+
+"
+process_docs: !function utils.process_docs_EGY_astronomy

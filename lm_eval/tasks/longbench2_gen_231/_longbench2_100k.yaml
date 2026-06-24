@@ -1,0 +1,24 @@
+group: longbench2_gen_100k
+task:
+  - longbench2_govt_single_gen
+  - longbench2_legal_single_gen
+  - longbench2_lit_single_gen
+  - longbench2_fin_single_gen
+  - longbench2_event_order_gen
+  - longbench2_academic_single_gen
+  - longbench2_detective_gen
+  - longbench2_govt_multi_gen
+  - longbench2_academic_multi_gen
+  - longbench2_fin_multi_gen
+  - longbench2_news_multi_gen
+  - longbench2_legal_multi_gen
+  - longbench2_user_guide_gen
+  - longbench2_many_shot_gen
+  - longbench2_agent_history_gen
+  - longbench2_table_gen
+  - longbench2_code_gen
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: true
+metadata:
+  version: 0.0

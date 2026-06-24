@@ -1,0 +1,7 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_ENG_tasks_gen"
+"task": "mmlu_ar_dial_ENG_public_relations_gen"
+"task_alias": "ENG: public relations_gen"
+"description": "The following are multiple choice questions (with answers) about public
+  relations.\n"
+process_docs: !function utils.process_docs_ENG_public_relations

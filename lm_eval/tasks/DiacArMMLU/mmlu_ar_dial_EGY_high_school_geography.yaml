@@ -1,0 +1,8 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_EGY_tasks"
+"task": "mmlu_ar_dial_EGY_high_school_geography"
+"task_alias": "EGY: high school geography"
+"description": "The following are multiple choice questions (with answers) about high school geography.
+
+"
+process_docs: !function utils.process_docs_EGY_high_school_geography

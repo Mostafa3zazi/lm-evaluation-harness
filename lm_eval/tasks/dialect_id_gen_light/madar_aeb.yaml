@@ -1,0 +1,6 @@
+task: dialect_id_madar_aeb_gen_light
+dataset_kwargs:
+  data_files:
+    test: dialect_id_light/MADAR_aeb.json
+
+include: _default_template_yaml

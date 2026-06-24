@@ -1,0 +1,6 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_UAE_tasks_gen"
+"task": "mmlu_ar_dial_UAE_anatomy_gen"
+"task_alias": "UAE: anatomy_gen"
+"description": "The following are multiple choice questions (with answers) about anatomy.\n"
+process_docs: !function utils.process_docs_UAE_anatomy

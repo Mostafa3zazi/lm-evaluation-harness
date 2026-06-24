@@ -1,0 +1,7 @@
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_EGY_tasks_gen"
+"task": "mmlu_ar_dial_EGY_clinical_knowledge_gen"
+"task_alias": "EGY: clinical knowledge_gen"
+"description": "The following are multiple choice questions (with answers) about clinical
+  knowledge.\n"
+process_docs: !function utils.process_docs_EGY_clinical_knowledge

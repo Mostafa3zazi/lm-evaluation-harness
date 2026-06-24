@@ -1,0 +1,19 @@
+group: arastem
+metadata:
+    description: AraSTEM tasks
+    version: 0
+task:
+- arastem_primary_math
+- arastem_primary_science
+- arastem_secondary_biology
+- arastem_secondary_chemistry
+- arastem_secondary_math
+- arastem_secondary_physics
+- arastem_secondary_science
+- arastem_college_biology
+- arastem_college_chemistry
+- arastem_college_dentistry
+- arastem_college_information_technology
+- arastem_college_medicine
+- arastem_college_pharmacy
+- arastem_college_physics

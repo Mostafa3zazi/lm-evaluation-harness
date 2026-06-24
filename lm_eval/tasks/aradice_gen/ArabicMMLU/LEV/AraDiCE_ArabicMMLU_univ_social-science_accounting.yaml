@@ -1,0 +1,10 @@
+"dataset_name": "univ_social-science_accounting"
+"description": ""
+"fewshot_split":
+"include": "_default_template_yaml"
+"tag": "AraDiCE_ArabicMMLU_social-science_lev_gen"
+"task": "AraDiCE_ArabicMMLU_univ_social-science_accounting_lev_gen"
+"task_alias": "univ social-science accounting_gen"
+"test_split": "test"
+"training_split":
+"validation_split":
